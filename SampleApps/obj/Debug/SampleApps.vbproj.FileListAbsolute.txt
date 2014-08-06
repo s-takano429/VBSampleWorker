@@ -1,0 +1,14 @@
+C:\work\Works\SampleApps\obj\Debug\SampleApps.vbproj.ResolveComReference.cache
+C:\work\Works\SampleApps\bin\Debug\SampleApps.exe
+C:\work\Works\SampleApps\bin\Debug\SampleApps.pdb
+C:\work\Works\SampleApps\bin\Debug\SampleApps.xml
+C:\work\Works\SampleApps\obj\Debug\SampleApps.Resources.resources
+C:\work\Works\SampleApps\obj\Debug\SampleApps.FrmSample.resources
+C:\work\Works\SampleApps\obj\Debug\SampleApps.vbproj.GenerateResource.Cache
+C:\work\Works\SampleApps\obj\Debug\SampleApps.exe
+C:\work\Works\SampleApps\obj\Debug\SampleApps.xml
+C:\work\Works\SampleApps\obj\Debug\SampleApps.pdb
+C:\Users\H3413135\OUT\sampleApps\samples\SampleApps\obj\Debug\SampleApps.vbproj.ResolveComReference.cache
+C:\Users\H3413135\OUT\sampleApps\samples\SampleApps\obj\Debug\SampleApps.exe
+C:\Users\H3413135\OUT\sampleApps\samples\SampleApps\obj\Debug\SampleApps.xml
+C:\Users\H3413135\OUT\sampleApps\samples\SampleApps\obj\Debug\SampleApps.pdb

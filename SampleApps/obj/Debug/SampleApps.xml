@@ -1,0 +1,809 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SampleApps
+</name>
+</assembly>
+<members>
+<member name="M:SampleApps.CSVUtils.CSVFileToDataTable(System.String,System.Boolean)">
+	<summary>
+ CSVファイルをDataTable（すべて文字列取込）に変換
+ </summary>
+	<param name="csvFilePath">CSVファイルパス</param>
+	<param name="HDR">ヘッダがあるか</param>
+	<returns>変換結果のDataTable</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.CSVUtils.CSVToDataTable(System.String,System.Boolean)">
+	<summary>
+ CSVテキストをDataTable（すべて文字列取込）に変換
+ </summary>
+	<param name="csvText">CSVの内容が入ったString</param>
+	<param name="HDR">ヘッダがあるか</param>
+	<returns>変換結果のDataTable</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.CSVUtils.exportDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ DataTable型のデータをCSVファイルに出力する
+ </summary>
+	<param name="dt">出力するDataTable</param>
+	<param name="csvPath">出力ファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.NullableDateTimePicker.#ctor">
+	<summary>
+ Default Constructor
+ </summary>
+</member><member name="P:SampleApps.NullableDateTimePicker.Value">
+	<summary>
+ Gets or sets the date/time value assigned to the control.
+ </summary>
+	<value>The DateTime value assigned to the control
+ </value>
+	<remarks>
+		<p>If the <b>Value</b> property has not been changed in code or by the user, it is set
+ to the current date and time (<see cref="P:System.DateTime.Now"/>).</p>
+		<p>If <b>Value</b> is <b>null</b>, the DateTimePicker shows 
+ <see cref="P:SampleApps.NullableDateTimePicker.NullValue"/>.</p>
+	</remarks>
+</member><member name="P:SampleApps.NullableDateTimePicker.Format">
+	<summary>
+ Gets or sets the format of the date and time displayed in the control.
+ </summary>
+	<value>One of the <see cref="T:System.Windows.Forms.DateTimePickerFormat"/> values. The default is 
+ <see cref="F:System.Windows.Forms.DateTimePickerFormat.Long"/>.</value>
+</member><member name="P:SampleApps.NullableDateTimePicker.CustomFormat">
+	<summary>
+ Gets or sets the custom date/time format string.
+ <value>A string that represents the custom date/time format. The default is a null
+ reference (<b>Nothing</b> in Visual Basic).</value>
+	</summary>
+</member><member name="P:SampleApps.NullableDateTimePicker.NullValue">
+	<summary>
+ Gets or sets the string value that is assigned to the control as null value. 
+ </summary>
+	<value>The string value assigned to the control as null value.</value>
+	<remarks>
+ If the <see cref="P:SampleApps.NullableDateTimePicker.Value"/> is <b>null</b>, <b>NullValue</b> is
+ shown in the <b>DateTimePicker</b> control.
+ </remarks>
+</member><member name="P:SampleApps.NullableDateTimePicker.FormatAsString">
+	<summary>
+ Stores the current format of the DateTimePicker as string. 
+ </summary>
+</member><member name="M:SampleApps.NullableDateTimePicker.SetFormat">
+	<summary>
+ Sets the format according to the current DateTimePickerFormat.
+ </summary>
+</member><member name="M:SampleApps.NullableDateTimePicker.SetToNullValue">
+	<summary>
+ Sets the <b>DateTimePicker</b> to the value of the <see cref="P:SampleApps.NullableDateTimePicker.NullValue"/> property.
+ </summary>
+</member><member name="M:SampleApps.NullableDateTimePicker.SetToDateTimeValue">
+	<summary>
+ Sets the <b>DateTimePicker</b> back to a non null value.
+ </summary>
+</member><member name="M:SampleApps.NullableDateTimePicker.OnCloseUp(System.EventArgs)">
+	<summary>
+ This member overrides <see cref="M:System.Windows.Forms.DateTimePicker.OnCloseUp(System.EventArgs)"/>.
+ </summary>
+	<param name="e"></param>
+</member><member name="M:SampleApps.NullableDateTimePicker.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ This member overrides <see cref="M:System.Windows.Forms.Control.OnKeyDown(System.Windows.Forms.KeyEventArgs)"/>.
+ </summary>
+	<param name="e"></param>
+</member><member name="T:SampleApps.NullableDateTimePicker">
+	<summary>
+ Represents a Windows date time picker control. It enhances the .NET standard <b>DateTimePicker</b>
+ control with a ReadOnly mode as well as with the possibility to show empty values (null values).
+ </summary>
+</member><member name="T:SampleApps.CMsg">
+	<summary>
+ ログを格納するクラス.
+ </summary>
+	<remarks>
+ 定義なしでも可.定数のみ.
+ ログ出力を行う際に設定する.
+ </remarks>
+</member><member name="F:SampleApps.DbAccessUtils._oCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを表します。
+ </summary>
+</member><member name="P:SampleApps.DbAccessUtils.OCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを取得または設定します。
+ </summary>
+	<value>DBに対して実行するSQLステートメント</value>
+	<returns>DBに対して実行するSQLステートメント</returns>
+</member><member name="P:SampleApps.DbAccessUtils.DbConnection">
+	<summary>
+ 接続中のOleDbConnectionを公開します。
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+</member><member name="M:SampleApps.DbAccessUtils.DbConn(System.String@,System.String,System.Boolean)">
+	<summary>
+ DBへ接続します。
+ </summary>
+	<param name="path">DBファイルパス</param>
+	<param name="pass">DBパスワード</param>
+	<param name="exclusiveMode">排他モード</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.GetTableNameList">
+	<summary>
+ MDBに含まれるテーブル名一覧を取得(それぞれのテーブル名には、カラム名一覧が付随する)
+ </summary>
+	<returns>テーブル名リスト</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.DbConnXls(System.String@)">
+	<summary>
+ DBへ接続します(XLS)。
+ </summary>
+	<param name="path">接続先DBパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.OpenCsv(System.String,System.Boolean)">
+	<summary>
+ DBへ接続する（csv）
+ </summary>
+	<param name="path">接続先（ファイル名を含めない）</param>
+	<param name="hdr">ヘッダー有無 True=有 False=無</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.DbChangePass(System.String,System.String,System.String)">
+	<summary>
+ DBのパスワード変更
+ </summary>
+	<param name="path">変更するMDBファイル</param>
+	<param name="newPass">新しいパスワード</param>
+	<param name="oldPass">以前のパスワード</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.DbConnTran(System.String@)">
+	<summary>
+ DBへ接続し、トランザクションを開始します。
+ </summary>
+	<param name="path">接続先DBパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DbAccessUtils.DbCommit">
+	<summary>
+ トランザクションをコミットします。
+ </summary>
+</member><member name="M:SampleApps.DbAccessUtils.DbRollback">
+	<summary>
+ トランザクションをロールバックします。
+ </summary>
+</member><member name="M:SampleApps.DbAccessUtils.DbClose">
+	<summary>
+ DBを切断します。
+ </summary>
+</member><member name="M:SampleApps.DbAccessUtils.FillDataSet(System.String@)">
+	<summary>
+ DBからデータを取得します。（DB接続済み）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得データセット</returns>
+</member><member name="M:SampleApps.DbAccessUtils.FillDataSet(System.String@,System.String@)">
+	<summary>
+ DBからデータを取得します。（DB接続）
+ </summary>
+	<param name="path">接続先DBパス</param>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得データセット</returns>
+</member><member name="M:SampleApps.DbAccessUtils.GetDataTable(System.String)">
+	<summary>
+ DBからデータを取得する（DataTable）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.DbAccessUtils.GetCellData(System.String)">
+	<summary>
+ DBからデータを取得する（結果セットの最初の行の最初の列。結果セットが空の場合は、null 参照。）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.DbAccessUtils.ExecuteQuery(System.String@)">
+	<summary>
+ クエリを実行します。（DB接続済み）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>クエリ実行結果</returns>
+</member><member name="M:SampleApps.DbAccessUtils.ExecuteQuery(System.String@,System.String@)">
+	<summary>
+ クエリを実行します。（DB接続）
+ </summary>
+	<param name="path">接続先DBパス</param>
+	<param name="sql">SQLステートメント</param>
+	<returns>クエリ実行結果</returns>
+</member><member name="M:SampleApps.DbAccessUtils.GetSheetName">
+	<summary>
+ Excelファイルからシート名を取得する
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:SampleApps.DbAccessUtils">
+	<summary>
+ DBへのアクセスを行ないます。
+ </summary>
+</member><member name="M:SampleApps.AbstractCtrl.initialize">
+	<summary>
+ 初期値の設定を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.validate">
+	<summary>
+ 入力値の検証を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.open">
+	<summary>
+ 処理を行うオブジェクトのオープン処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.execute">
+	<summary>
+ 処理を行うオブジェクトの実行処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.close">
+	<summary>
+ 処理を行うオブジェクトのクローズ処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.completed">
+	<summary>
+ バックグランド処理終了時の処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.cancelled">
+	<summary>
+ バックグランド処理キャンセル時の処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.run">
+	<summary>
+ 一連の処理を一括で行う。
+ </summary>
+	<remarks>例外のハンドリングは行わず一括で上位メソッドに例外を飛ばす。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.startWorker">
+	<summary>
+ 一連の処理をバックグランド処理で一括で行う。
+ </summary>
+	<remarks>例外のハンドリングは行わず一括で上位メソッドに例外を飛ばす。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.stopWorker">
+	<summary>
+ バックグランド処理をキャンセルする。
+ </summary>
+	<remarks>例外のハンドリングは行わず一括で上位メソッドに例外を飛ばす。</remarks>
+</member><member name="M:SampleApps.AbstractCtrl.setProgressToModel(SampleApps.AbstractMdl)">
+	<summary>
+ 通知用オブジェクトの設定。
+ </summary>
+	<param name="mdl"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.checkCancellation">
+	<summary>
+ 処理のキャンセルが行われているかを確認する。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.changeProgressText(System.String)">
+	<summary>
+ プログレステキストを変更する。
+ </summary>
+	<param name="txt"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.changeProgressValue(System.Int32)">
+	<summary>
+ プログレスバーの値を変更する。
+ </summary>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.changeProgress(System.String,System.Int32)">
+	<summary>
+ プログレステキストとバーの値を変更する。
+ </summary>
+	<param name="txt"></param>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.backGroundWorker_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+	<summary>
+ バックグランド処理。
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.backGroundWorker_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+	<summary>
+ バックグランド処理終了時処理。
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractCtrl.backGroundWorker_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+	<summary>
+ 進行状態の変更あった場合。
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:SampleApps.ValidateException">
+	<summary>
+ Validate処理時例外のラッピングクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.run">
+	<summary>
+ Thread内処理。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.startThread">
+	<summary>
+ Thread処理を開始する。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.stopThread">
+	<summary>
+ Thread処理を強制終了する。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.joinThread">
+	<summary>
+ Thread処理の終了待機をする。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.completed">
+	<summary>
+ バックグランド処理終了時の処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractMdl.cancelled">
+	<summary>
+ バックグランド処理キャンセル時の処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.AbstractMdl.changeProgressText(System.String)">
+	<summary>
+ プログレステキストを変更する。
+ </summary>
+	<param name="txt"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.changeProgressValue(System.Int32)">
+	<summary>
+ プログレスバーの値を変更する。
+ </summary>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.changeProgress(System.String,System.Int32)">
+	<summary>
+ プログレステキストとバーの値を変更する。
+ </summary>
+	<param name="txt"></param>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.AbstractMdl.runThread">
+	<summary>
+ Thread実行メソッド。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.isZenkakuStr(System.String@)">
+	<summary>
+ 引数文字列が全て全角の場合にtrueを返します。
+ </summary>
+	<param name="str">チェック対象文字列</param>
+	<returns>引数文字列が全て全角の場合はtrue、そうでない場合はfalse</returns>
+</member><member name="M:SampleApps.StringUtils.isHankakuStr(System.String@)">
+	<summary>
+ 引数文字列が全て半角の場合にtrueを返します。
+ </summary>
+	<param name="str">チェック対象文字列</param>
+	<returns>引数文字列が全て半角の場合はtrue、そうでない場合はfalse</returns>
+</member><member name="M:SampleApps.StringUtils.readTextShiftJIS(System.String)">
+	<summary>
+ Shift-JISでテキストを読み込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<returns>ファイルを読み込んだリスト</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.readTextUTF8(System.String)">
+	<summary>
+ UTF-8でテキストを読み込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<returns>ファイルを読み込んだリスト</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.readText(System.String,System.Text.Encoding)">
+	<summary>
+ UTF-8でテキストを読み込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<returns>ファイルを読み込んだリスト</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.writeTextShiftJIS(System.String,System.String)">
+	<summary>
+ Shift-JISでテキストを書き込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.writeTextUTF8(System.String,System.String)">
+	<summary>
+ UTF-8でテキストを書き込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.writeTextShiftJIS(System.String,System.Collections.Generic.List{System.String})">
+	<summary>
+ Shift-JISでテキストを書き込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.writeTextUTF8(System.String,System.Collections.Generic.List{System.String})">
+	<summary>
+ UTF-8でテキストを書き込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.listToString(System.Collections.Generic.List{System.String})">
+	<summary>
+ リストから文字列に変換する。
+ </summary>
+	<param name="stringList">文字列リスト</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.writeText(System.String,System.Text.Encoding,System.String)">
+	<summary>
+ 文字列をファイル書き込む。
+ </summary>
+	<param name="filePath">ファイルパス</param>
+	<param name="encording">エンコード</param>
+	<param name="writeString">書き込み文字列</param>
+	<remarks>ファイルは上書きする</remarks>
+</member><member name="M:SampleApps.StringUtils.left(System.String,System.Int32)">
+	<summary>
+ 左から指定文字列抜出す。
+ </summary>
+	<param name="str"></param>
+	<param name="len"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.right(System.String,System.Int32)">
+	<summary>
+ 右から指定文字列抜出す。
+ </summary>
+	<param name="str"></param>
+	<param name="len"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.match(System.String,System.String)">
+	<summary>
+ 検索対象文字列から正規表現パターンを抜出す。
+ </summary>
+	<param name="str">検索対象文字列</param>
+	<param name="regex">検索用正規表現</param>
+	<returns>検索一致文字列(複数一致があっても最初の1回の適合文字列のみ返す)</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.matches(System.String,System.String)">
+	<summary>
+ 検索対象文字列から正規表現パターンを抜出す。
+ </summary>
+	<param name="str">検索対象文字列</param>
+	<param name="regex">検索用正規表現</param>
+	<returns>検索一致文字列リスト</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.reverse(System.String)">
+	<summary>
+ 反転文字列を返す。
+ </summary>
+	<param name="str">反転対象文字列</param>
+	<returns>反転文字</returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.removeEnd(System.String,System.Int32)">
+	<summary>
+ 末尾の指定文字数を削除した文字列を返す。
+ </summary>
+	<param name="str">対象文字列</param>
+	<param name="len">削除文字数</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.StringUtils.removeStart(System.String,System.Int32)">
+	<summary>
+ 初めの指定文字数を削除した文字列を返す。
+ </summary>
+	<param name="str">対象文字列</param>
+	<param name="len">削除文字数</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:SampleApps.CloseException">
+	<summary>
+ close処理時例外のラッピングクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.ProgressFormControl.#ctor(System.Windows.Forms.ToolStripStatusLabel@,System.Windows.Forms.ToolStripProgressBar@)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="label">プログレスバーラベル</param>
+	<param name="bar">プログレスバー</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.ProgressFormControl.changeProgressText(System.String)">
+	<summary>
+ プログレステキストを変更する。
+ </summary>
+	<param name="txt"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.ProgressFormControl.changeProgressValue(System.Int32)">
+	<summary>
+ プログレスバーの値を変更する。
+ </summary>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.ProgressFormControl.changeProgress(System.String,System.Int32)">
+	<summary>
+ プログレステキストとバーの値を変更する。
+ </summary>
+	<param name="txt"></param>
+	<param name="progressValue"></param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.NullCtrlImpl.initialize">
+	<summary>
+ 初期値の設定を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.NullCtrlImpl.validate">
+	<summary>
+ 入力値の検証を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.NullCtrlImpl.open">
+	<summary>
+ 処理を行うオブジェクトのオープン処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.NullCtrlImpl.execute">
+	<summary>
+ 処理を行うオブジェクトの実行処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="M:SampleApps.NullCtrlImpl.close">
+	<summary>
+ 処理を行うオブジェクトのクローズ処理を行う。
+ </summary>
+	<remarks>例外のハンドリングを行う。</remarks>
+</member><member name="T:SampleApps.NullCtrlImpl">
+	<summary>
+ 何も行わないController実装クラス.
+ </summary>
+	<remarks>
+ 実装スケルトンコード。
+ 初期化時などに使用し、Nullで処理が停止しないようにする。
+ </remarks>
+</member><member name="M:SampleApps.DateTimeUtils.getInstance">
+	<summary>
+ インスタンスを取得します。
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DateTimeUtils.getRoundDateTime(System.Int32,System.DateTime)">
+	<summary>
+ 大体の時刻を求める。
+ </summary>
+	<param name="d"></param>
+	<param name="min"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DateTimeUtils.updateTime(System.Object,System.EventArgs)">
+	<summary>
+ 内部保持現在時刻を更新
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="P:SampleApps.DateTimeUtils.DivideInMinutes">
+	<summary>
+ 分割時間のプロパティ。単位：分。1以下の場合、自動的に1となる。
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DateTimeUtilsEventArgs.#ctor(System.DateTime)">
+	<summary>
+ コンストラクタ。
+ </summary>
+	<param name="time"></param>
+	<remarks></remarks>
+</member><member name="P:SampleApps.DateTimeUtilsEventArgs.time">
+	<summary>プログレスバーの進捗状況を取得します。</summary>
+</member><member name="T:SampleApps.ExecuteException">
+	<summary>
+ Execute処理時例外のラッピングクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SampleApps.OpenException">
+	<summary>
+ Open処理時例外のラッピングクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SampleApps.ExcelAccesser._oCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを表します。
+ </summary>
+</member><member name="M:SampleApps.ExcelAccesser.getInstance">
+	<summary>
+ インスタンスを取得します。
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SampleApps.ExcelAccesser.OCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを取得または設定します。
+ </summary>
+	<value>DBに対して実行するSQLステートメント</value>
+	<returns>DBに対して実行するSQLステートメント</returns>
+</member><member name="M:SampleApps.ExcelAccesser.dbConn(System.String@,System.String,System.Boolean)">
+	<summary>
+ DBへ接続します。
+ </summary>
+	<param name="path">DBファイルパス</param>
+	<param name="pass">DBパスワード</param>
+	<param name="exclusiveMode">排他モード</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.ExcelAccesser.dbClose">
+	<summary>
+ DBを切断します。
+ </summary>
+</member><member name="M:SampleApps.ExcelAccesser.fillDataSet(System.String@)">
+	<summary>
+ DBからデータを取得します。（DB接続済み）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得データセット</returns>
+</member><member name="M:SampleApps.ExcelAccesser.getCellData(System.String)">
+	<summary>
+ DBからデータを取得する（結果セットの最初の行の最初の列。結果セットが空の場合は、null 参照。）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.ExcelAccesser.getDataTable(System.String)">
+	<summary>
+ DBからデータを取得する（DataTable）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.ExcelAccesser.execSQL(System.String)">
+	<summary>
+ DBにクエリを実行する
+ </summary>
+	<param name="sql">SQLステートメント</param>
+</member><member name="M:SampleApps.ExcelAccesser.getUpdatableDataTable(System.String,System.String)">
+	<summary>
+ DBからデータを取得する（DataTable）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="F:SampleApps.DBAccesser._oCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを表します。
+ </summary>
+</member><member name="M:SampleApps.DBAccesser.getInstance">
+	<summary>
+ インスタンスを取得します。
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SampleApps.DBAccesser.OCommand">
+	<summary>
+ DBに対して実行するSQLステートメントを取得または設定します。
+ </summary>
+	<value>DBに対して実行するSQLステートメント</value>
+	<returns>DBに対して実行するSQLステートメント</returns>
+</member><member name="M:SampleApps.DBAccesser.dbConn(System.String@,System.String,System.Boolean)">
+	<summary>
+ DBへ接続します。
+ </summary>
+	<param name="path">DBファイルパス</param>
+	<param name="pass">DBパスワード</param>
+	<param name="exclusiveMode">排他モード</param>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DBAccesser.dbClose">
+	<summary>
+ DBを切断します。
+ </summary>
+</member><member name="M:SampleApps.DBAccesser.fillDataSet(System.String@)">
+	<summary>
+ DBからデータを取得します。（DB接続済み）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得データセット</returns>
+</member><member name="M:SampleApps.DBAccesser.getCellData(System.String)">
+	<summary>
+ DBからデータを取得する（結果セットの最初の行の最初の列。結果セットが空の場合は、null 参照。）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.DBAccesser.getDataTable(System.String)">
+	<summary>
+ DBからデータを取得する（DataTable）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="M:SampleApps.DBAccesser.execSQL(System.String)">
+	<summary>
+ DBにクエリを実行する
+ </summary>
+	<param name="sql">SQLステートメント</param>
+</member><member name="M:SampleApps.DBAccesser.getUpdatableDataTable(System.String,System.String)">
+	<summary>
+ DBからデータを取得する（DataTable）
+ </summary>
+	<param name="sql">SQLステートメント</param>
+	<returns>取得DataTable</returns>
+</member><member name="T:SampleApps.CEMsg">
+	<summary>
+ エラーログを格納するクラス.
+ </summary>
+	<remarks>
+ 定義なしでも可.定数のみ.
+ エラーログ出力を行う際に設定する.
+ </remarks>
+</member><member name="M:SampleApps.DataTableUtils.LoadDataSetFromExcel(System.String,System.Data.DataSet@)">
+	<summary>
+ハッシュテーブルをエクセルファイルから取得します
+ Hashtable：key=SheetName,value=DataTable
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.LoadHashTableFromExcel(System.String,System.Collections.Generic.Dictionary{System.String,System.Data.DataTable}@)">
+	<summary>
+ハッシュテーブルをエクセルファイルから取得します
+ Hashtable：key=SheetName,value=DataTable
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.CreateExcelFromDataSet(System.Data.DataSet,System.String)">
+	<summary>
+DataSetをエクセルファイルに出力します
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.CreateExcelFromHashTable(System.Collections.Generic.Dictionary{System.String,System.Data.DataTable},System.String)">
+	<summary>
+ハッシュテーブルをエクセルファイルに出力します
+ Hashtable：key=SheetName,value=DataTable
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.CreateExcelFromDataSet(System.Data.DataSet,System.String,System.String)">
+	<summary>
+データセットをエクセルファイルに出力します
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.CreateExcelFromDataTable(System.Data.DataTable,System.String,System.String)">
+	<summary>
+データテーブルをエクセルファイルに出力します
+</summary>
+</member><member name="M:SampleApps.DataTableUtils.ReleaseComObject(System.Object@)">
+	<summary>
+ COMオブジェクトを開放します。
+ </summary>
+</member><member name="P:SampleApps.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:SampleApps.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="P:SampleApps.My.Resources.Resources.a">
+	<summary>
+   に類似しているローカライズされた文字列を検索します。
+</summary>
+</member><member name="T:SampleApps.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="T:SampleApps.InitializeException">
+	<summary>
+ Initializ処理時例外のラッピングクラス
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SampleApps.DBFileOperationUtil.CopyDB(System.String,System.String)">
+	<summary>
+ テンプレートDBコピー
+ </summary>
+	<param name="SourceDBFilePath">テンプレートDBパス</param>
+	<param name="DestinationDBFilePath">出力先DBパス</param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
